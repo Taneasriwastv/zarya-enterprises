@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zarya Enterprises | B2B Procurement &amp; Corporate Gifting in Delhi NCR</title>
+<meta name="description" content="Zarya Enterprises is a Noida-based B2B procurement and supply partner. Office electronics, office essentials, corporate gifting and custom bulk orders, delivered across Delhi NCR with a proper GST invoice.">
+<meta property="og:title" content="Zarya Enterprises | One vendor for everything your office needs">
+<meta property="og:description" content="Office electronics, essentials and corporate gifting, sourced and delivered across Delhi NCR. GST &amp; Udyam registered.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1e2a5a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1e2a5a; --navy-2:#2b3a78; --ink:#1a1f36; --muted:#5b6478;
+  --sun:#f59e0b; --sun-2:#fbbf24; --peach:#fff4e5; --bg:#ffffff; --soft:#f6f7fb;
+  --line:#e6e8f0; --ok:#0f9d58; --radius:16px; --shadow:0 10px 30px rgba(30,42,90,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1140px,100% - 32px);margin-inline:auto}
+section{padding:80px 0}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:12px}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sun);margin-bottom:10px}
+.lead{color:var(--muted);font-size:1.075rem;max-width:640px}
+.center{text-align:center}.center .lead{margin-inline:auto}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--sun);color:#1a1300;box-shadow:0 8px 20px rgba(245,158,11,.35)}
+.btn-primary:hover{background:var(--sun-2)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-dark{background:var(--navy);color:#fff}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.15rem;color:var(--navy)}
+.brand svg{width:38px;height:38px}
+.brand small{display:block;font-size:.7rem;font-weight:600;color:var(--muted);letter-spacing:.04em}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font-weight:600;color:var(--muted);font-size:.95rem}
+.nav ul a:hover{color:var(--navy)}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;transition:.2s}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 85% 110%,#f59e0b55 0%,transparent 55%),linear-gradient(160deg,var(--navy) 0%,#273777 60%,#3a3f86 100%);color:#fff;padding:90px 0 110px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--sun-2)}
+.hero p{font-size:1.15rem;opacity:.9;max-width:560px;margin-bottom:30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
+.badge::before{content:"✓";color:var(--sun-2);font-weight:800}
+.hero-card{background:#fff;color:var(--ink);border-radius:22px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.hero-card h3{font-size:1.05rem;margin-bottom:16px;color:var(--navy)}
+.hero-card ol{list-style:none;display:grid;gap:14px;counter-reset:s}
+.hero-card li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--muted)}
+.hero-card li b{color:var(--ink)}
+.hero-card li::before{counter-increment:s;content:counter(s);flex:0 0 28px;height:28px;border-radius:50%;background:var(--peach);color:#b45309;font-weight:800;display:grid;place-items:center;font-size:.85rem}
+
+/* stats */
+.stats{margin-top:-56px;position:relative;z-index:2;padding:0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+.stat{padding:26px 22px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(1.6rem,3vw,2.1rem);color:var(--navy);font-weight:800}
+.stat span{color:var(--muted);font-size:.9rem}
+.stats-note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:12px}
+
+/* products */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:52px;height:52px;border-radius:14px;background:var(--peach);display:grid;place-items:center;font-size:1.6rem;margin-bottom:16px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:.78rem;background:var(--soft);border:1px solid var(--line);padding:4px 10px;border-radius:999px;color:#3d4560}
+.card .ask{display:inline-block;margin-top:14px;font-weight:700;color:var(--navy);text-decoration:none;font-size:.92rem}
+.card .ask:hover{color:#b45309}
+
+/* supplied */
+.soft{background:var(--soft)}
+.supplied{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:36px}
+.sup{background:#fff;border-radius:14px;padding:20px;border-left:4px solid var(--sun);box-shadow:0 2px 10px rgba(30,42,90,.05)}
+.sup b{display:block;font-size:1.6rem;color:var(--navy);font-weight:800;line-height:1.1}
+.sup span{color:var(--muted);font-size:.92rem}
+.story{margin-top:36px;background:var(--navy);color:#fff;border-radius:20px;padding:34px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.story .big{font-size:3rem;font-weight:800;color:var(--sun-2);line-height:1}
+.story p{opacity:.9}
+.story h3{font-size:1.3rem;margin-bottom:6px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;counter-reset:st}
+.step{position:relative;padding:26px 22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line)}
+.step::before{counter-increment:st;content:"0" counter(st);font-size:2rem;font-weight:800;color:var(--sun);display:block;margin-bottom:8px}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.93rem}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.why div{display:flex;gap:14px;align-items:flex-start;padding:20px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.why i{font-style:normal;font-size:1.5rem;flex:0 0 auto}
+.why h3{font-size:1rem;margin-bottom:4px}
+.why p{color:var(--muted);font-size:.92rem}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:36px}
+.cal div{padding:22px;border-radius:14px;background:linear-gradient(160deg,#fff,var(--peach));border:1px solid #fde3b8}
+.cal small{font-weight:800;color:#b45309;letter-spacing:.05em;text-transform:uppercase;font-size:.75rem}
+.cal h3{font-size:1.05rem;margin:4px 0 6px}
+.cal p{color:var(--muted);font-size:.9rem}
+
+/* quote */
+.quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.contact-box{margin-top:24px;padding:20px;border-radius:14px;background:var(--soft);border:1px solid var(--line)}
+.contact-box a{font-weight:700;color:var(--navy);word-break:break-all}
+.copy{margin-left:6px;font:inherit;font-size:.8rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+label{display:block;font-weight:600;font-size:.88rem;margin-bottom:6px}
+label .opt{color:var(--muted);font-weight:500}
+input,select,textarea{width:100%;font:inherit;font-size:.95rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(30,42,90,.12)}
+textarea{min-height:110px;resize:vertical}
+.form-note{color:var(--muted);font-size:.82rem;margin-top:10px}
+form .btn{width:100%;justify-content:center}
+.err{color:#c62828;font-size:.85rem;margin-bottom:10px;display:none}
+
+/* faq */
+.faq{max-width:780px;margin:36px auto 0}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--sun);line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px}
+
+/* footer */
+footer{background:#121a3d;color:#c9cee0;padding:56px 0 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{color:#fff;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none;color:#c9cee0}
+footer a:hover{color:var(--sun-2)}
+footer .brand{color:#fff}
+.copyright{border-top:1px solid #26305a;margin-top:36px;padding-top:20px;font-size:.85rem;text-align:center}
+
+/* floating CTA (mobile) */
+.float{position:fixed;right:16px;bottom:16px;z-index:60;display:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:960px){
+  .hero-grid,.quote-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  section{padding:60px 0}
+  .menu-btn{display:block}
+  .nav ul{position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 18px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);display:none}
+  .nav ul.open{display:flex}
+  .nav ul li a{display:block;padding:12px 4px}
+  .nav ul .btn{justify-content:center;margin-top:8px}
+  .hero{padding:60px 0 100px}
+  .steps,.row{grid-template-columns:1fr}
+  .story{grid-template-columns:1fr;padding:26px}
+  .foot{grid-template-columns:1fr}
+  .float{display:inline-flex}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Zarya Enterprises home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1e2a5a"/><circle cx="32" cy="40" r="13" fill="#f59e0b"/><rect x="8" y="40" width="48" height="16" fill="#1e2a5a"/><path d="M14 44h36" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/><path d="M21 18h22L22 34h21" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Zarya Enterprises<small>B2B PROCUREMENT · NOIDA</small></span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul id="menu">
+      <li><a href="#products">What we supply</a></li>
+      <li><a href="#work">Our work</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#quote" class="btn btn-primary">Get a quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Delhi NCR · Corporate supply partner</span>
+      <h1>One vendor for <em>everything</em> your office needs.</h1>
+      <p>Office electronics, essentials and corporate gifts, sourced at the right price and delivered to your office with a proper GST invoice. You tell us what you need, and we handle the rest.</p>
+      <div class="ctas">
+        <a href="#quote" class="btn btn-primary">Request a quotation →</a>
+        <a href="#products" class="btn btn-ghost">See what we supply</a>
+      </div>
+      <div class="badges">
+        <span class="badge">GST registered</span>
+        <span class="badge">Udyam (MSE) registered</span>
+        <span class="badge">GeM registered seller</span>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <h3>Ordering is simple</h3>
+      <ol>
+        <li><span><b>Send your list.</b> Item names and quantities, by form or email.</span></li>
+        <li><span><b>Get a proforma invoice.</b> A clear quotation with the price and GST.</span></li>
+        <li><span><b>Approve and relax.</b> We source, pack and deliver to your office.</span></li>
+        <li><span><b>GST invoice on delivery.</b> Ready for your accounts team.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="Track record">
+  <div class="wrap">
+    <div class="stats-grid reveal">
+      <div class="stat"><b>₹4.47L+</b><span>worth of goods supplied</span></div>
+      <div class="stat"><b>228</b><span>units delivered</span></div>
+      <div class="stat"><b>14</b><span>orders invoiced</span></div>
+      <div class="stat"><b>1 → 5</b><span>categories grown with one client</span></div>
+    </div>
+    <p class="stats-note">FY 2025–26 figures, all from repeat orders by a single banking client.</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">What we supply</span>
+      <h2>If your business needs it, we can source it</h2>
+      <p class="lead">These are our core categories, but we are not limited to them. Send us any requirement and we'll check sourcing.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">🎁</div>
+        <h3>Corporate gifting</h3>
+        <p>Festive and New Year gifts for employees and clients, in bulk and on time.</p>
+        <div class="tags"><span>Gift hampers</span><span>Trolley bags</span><span>Bedsheet &amp; comforter sets</span><span>Wall clocks</span><span>Earbuds</span></div>
+        <a class="ask" href="#quote" data-cat="Corporate gifting">Ask for gifting quote →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">⌨️</div>
+        <h3>Office electronics &amp; IT</h3>
+        <p>Branded peripherals and devices for desks, branches and new joiners.</p>
+        <div class="tags"><span>Keyboard–mouse combos</span><span>Earphones &amp; neckbands</span><span>Printers</span><span>Smartphones</span><span>Cables</span></div>
+        <a class="ask" href="#quote" data-cat="Office electronics & IT">Ask for electronics quote →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">🔐</div>
+        <h3>Biometric &amp; attendance</h3>
+        <p>Certified fingerprint scanners and attendance devices for offices and branches.</p>
+        <div class="tags"><span>RD-certified scanners</span><span>Attendance devices</span><span>Morpho &amp; similar</span></div>
+        <a class="ask" href="#quote" data-cat="Biometric & attendance devices">Ask for biometric quote →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">🏢</div>
+        <h3>Office fit-out &amp; appliances</h3>
+        <p>Furnishings and appliances for offices, guest houses and staff quarters.</p>
+        <div class="tags"><span>Curtains</span><span>Mattresses</span><span>Refrigerators</span><span>Furnishings</span></div>
+        <a class="ask" href="#quote" data-cat="Office fit-out & appliances">Ask for fit-out quote →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">📎</div>
+        <h3>Office essentials</h3>
+        <p>Everyday supplies your admin team would rather not chase across five vendors.</p>
+        <div class="tags"><span>Stationery</span><span>Pantry items</span><span>Housekeeping</span><span>Accessories</span></div>
+        <a class="ask" href="#quote" data-cat="Office essentials">Ask for essentials quote →</a>
+      </article>
+      <article class="card reveal">
+        <div class="icon" aria-hidden="true">📦</div>
+        <h3>Custom bulk orders</h3>
+        <p>Something specific? Share the brand, model or spec and we'll find it for you.</p>
+        <div class="tags"><span>Specific brands</span><span>Branded merchandise</span><span>New-joiner kits</span></div>
+        <a class="ask" href="#quote" data-cat="Custom bulk order">Ask for custom quote →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section id="work" class="soft">
+  <div class="wrap">
+    <span class="eyebrow">Our work</span>
+    <h2>Recently delivered in New Delhi</h2>
+    <p class="lead">A few of the orders we've fulfilled for a banking client, from festive gifting to IT and office set-up.</p>
+    <div class="supplied">
+      <div class="sup reveal"><b>65 pcs</b><span>Bedsheet &amp; comforter gift sets, comforters and bedsheets for festive gifting</span></div>
+      <div class="sup reveal"><b>55 pcs</b><span>Earbuds &amp; neckbands (boAt, OnePlus and more)</span></div>
+      <div class="sup reveal"><b>30 combos</b><span>HP wired keyboard &amp; mouse combos</span></div>
+      <div class="sup reveal"><b>10 units</b><span>Morpho RD-certified biometric fingerprint scanners</span></div>
+      <div class="sup reveal"><b>56 metres</b><span>Premium curtain cloth for office premises</span></div>
+      <div class="sup reveal"><b>8 pcs</b><span>Ajanta quartz wall clocks</span></div>
+      <div class="sup reveal"><b>Appliances</b><span>HP LaserJet MFP printer, LG refrigerator, orthopaedic mattress</span></div>
+      <div class="sup reveal"><b>Devices</b><span>Google Pixel smartphone, sourced to exact spec</span></div>
+    </div>
+    <div class="story reveal">
+      <div class="big">1 → 5</div>
+      <div>
+        <h3>From one category to five, with zero advertising</h3>
+        <p>We started by supplying earphones to one banking client. Because we delivered on time, kept prices fair and always invoiced properly, they came back for gifting, IT peripherals, biometric devices, furnishings and appliances. Every order since has been a repeat order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">How it works</span>
+      <h2>From requirement to delivery in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Share your requirement</h3><p>Use the form below or email us the item, quantity and delivery location.</p></div>
+      <div class="step reveal"><h3>We check sourcing</h3><p>We find the right product at the best available price from trusted channels.</p></div>
+      <div class="step reveal"><h3>Approve the quotation</h3><p>You get a proforma invoice with the full price and GST, with no hidden charges.</p></div>
+      <div class="step reveal"><h3>Delivered with GST invoice</h3><p>We deliver to your office anywhere in Delhi NCR with a proper tax invoice.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="soft">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Why Zarya</span>
+      <h2>Built for busy admin and procurement teams</h2>
+    </div>
+    <div class="why">
+      <div class="reveal"><i aria-hidden="true">🤝</i><div><h3>Single point of contact</h3><p>One person handles your order from quote to delivery, so you never chase multiple vendors.</p></div></div>
+      <div class="reveal"><i aria-hidden="true">🧾</i><div><h3>Clean paperwork</h3><p>Proforma first, GST invoice on delivery, and HSN codes on every line.</p></div></div>
+      <div class="reveal"><i aria-hidden="true">🏷️</i><div><h3>Genuine brands</h3><p>HP, LG, boAt, OnePlus, Morpho, Ajanta and more, or the exact model you specify.</p></div></div>
+      <div class="reveal"><i aria-hidden="true">🚚</i><div><h3>Delhi NCR delivery</h3><p>Noida, Greater Noida, Delhi, Gurugram, Ghaziabad and Faridabad.</p></div></div>
+      <div class="reveal"><i aria-hidden="true">🏛️</i><div><h3>Registered MSE</h3><p>GST and Udyam registered, and a seller on the Government e-Marketplace (GeM).</p></div></div>
+      <div class="reveal"><i aria-hidden="true">📦</i><div><h3>Small or bulk</h3><p>From one printer to hundreds of gift sets, every order gets the same care.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFTING CALENDAR -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Plan ahead</span>
+    <h2>Corporate gifting calendar</h2>
+    <p class="lead">Bulk gifting needs lead time. Reach out 2–3 weeks before the occasion for the best prices and stock.</p>
+    <div class="cal">
+      <div class="reveal"><small>December</small><h3>New Year gifting</h3><p>Hampers, bags and gadgets for teams and clients.</p></div>
+      <div class="reveal"><small>Jan – March</small><h3>Year-end budgets</h3><p>IT refresh, office upgrades and pending purchases.</p></div>
+      <div class="reveal"><small>8 March</small><h3>Women's Day</h3><p>Thoughtful gifts for your women employees.</p></div>
+      <div class="reveal"><small>Oct – Nov</small><h3>Diwali</h3><p>Home-linen sets, hampers, clocks and more.</p></div>
+      <div class="reveal"><small>All year</small><h3>New-joiner kits</h3><p>Keyboard, mouse, earphones and essentials, ready on day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote" class="soft">
+  <div class="wrap quote-grid">
+    <div>
+      <span class="eyebrow">Get a quotation</span>
+      <h2>Tell us what you need</h2>
+      <p class="lead">Fill in the form and your email app will open with your request ready to send. We reply with a proforma invoice, usually within one working day.</p>
+      <div class="contact-box">
+        <p style="margin-bottom:6px;font-weight:600">Prefer to email directly?</p>
+        <a href="mailto:contact.zaryaenterprise@gmail.com">contact.zaryaenterprise@gmail.com</a>
+        <button class="copy" type="button" data-copy="contact.zaryaenterprise@gmail.com">Copy</button>
+        <p style="margin-top:12px;color:var(--muted);font-size:.9rem">📍 Noida, Uttar Pradesh. Delivering across Delhi NCR.</p>
+      </div>
+    </div>
+    <form id="quoteForm" novalidate>
+      <div class="row">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="category">Category</label>
+          <select id="category" name="category">
+            <option>Corporate gifting</option>
+            <option>Office electronics &amp; IT</option>
+            <option>Biometric &amp; attendance devices</option>
+            <option>Office fit-out &amp; appliances</option>
+            <option>Office essentials</option>
+            <option>Custom bulk order</option>
+          </select>
+        </div>
+        <div class="field"><label for="city">Delivery city</label>
+          <select id="city" name="city">
+            <option>Noida</option><option>Greater Noida</option><option>Delhi</option><option>Gurugram</option><option>Ghaziabad</option><option>Faridabad</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="items">Items &amp; quantities</label>
+        <textarea id="items" name="items" required placeholder="e.g. 50 × gift hampers (budget ~₹1,000 each)&#10;20 × HP wired keyboard & mouse combo"></textarea>
+      </div>
+      <div class="field"><label for="when">Needed by <span class="opt">(optional)</span></label><input id="when" name="when" type="date"></div>
+      <p class="err" id="formErr" role="alert">Please fill in your name, company and the items you need.</p>
+      <button class="btn btn-primary" type="submit">Prepare my quote request →</button>
+      <p class="form-note">This opens your email app with everything filled in. Nothing is stored on this website.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is there a minimum order quantity?</summary><p>No fixed minimum. We've delivered single items like a printer or a refrigerator as well as bulk orders of 40+ gift sets. Bulk orders usually get better per-unit pricing.</p></details>
+      <details><summary>Do you provide a GST invoice?</summary><p>Yes. Every order comes with a proper GST tax invoice showing HSN codes and CGST/SGST or IGST as applicable. You get a proforma invoice before the order is confirmed.</p></details>
+      <details><summary>Which areas do you deliver to?</summary><p>We deliver across Delhi NCR: Noida, Greater Noida, Delhi, Gurugram, Ghaziabad and Faridabad.</p></details>
+      <details><summary>How long does delivery take?</summary><p>Most in-stock items reach you within a few working days of approval. For large gifting orders or specific models we confirm the timeline in the quotation.</p></details>
+      <details><summary>Can you source a specific brand or model?</summary><p>Yes. Share the exact brand, model number or specification and we'll quote for that item, or suggest close alternatives if it's unavailable.</p></details>
+      <details><summary>Are you registered with the government?</summary><p>Zarya Enterprises is GST registered, Udyam registered as a micro enterprise (MSE) and a registered seller on the Government e-Marketplace (GeM).</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand"><svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#2b3a78"/><circle cx="32" cy="40" r="13" fill="#f59e0b"/><rect x="8" y="40" width="48" height="16" fill="#2b3a78"/><path d="M14 44h36" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/><path d="M21 18h22L22 34h21" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>Zarya Enterprises</a>
+        <p style="margin-top:12px;max-width:340px">A B2B procurement and supply partner for corporates, banks and organisations across Delhi NCR.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#products">What we supply</a></li><li><a href="#work">Our work</a></li><li><a href="#how">How it works</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="mailto:contact.zaryaenterprise@gmail.com">contact.zaryaenterprise@gmail.com</a></li><li>Noida, Uttar Pradesh</li><li>GST &amp; Udyam registered</li></ul>
+      </div>
+    </div>
+    <p class="copyright">© <span id="yr">2026</span> Zarya Enterprises. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#quote" class="btn btn-primary float">Get a quote</a>
+
+<script>
+(function(){
+  var EMAIL = "contact.zaryaenterprise@gmail.com";
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // mobile menu
+  var btn = document.querySelector(".menu-btn"), menu = document.getElementById("menu");
+  btn.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+  menu.addEventListener("click", function(e){
+    if (e.target.tagName === "A") { menu.classList.remove("open"); btn.setAttribute("aria-expanded", false); }
+  });
+
+  // category buttons pre-select the form
+  document.querySelectorAll("[data-cat]").forEach(function(a){
+    a.addEventListener("click", function(){
+      var sel = document.getElementById("category");
+      for (var i = 0; i < sel.options.length; i++) if (sel.options[i].text === a.dataset.cat) sel.selectedIndex = i;
+      setTimeout(function(){ document.getElementById("items").focus({preventScroll:true}); }, 500);
+    });
+  });
+
+  // copy email
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var done = function(){ b.textContent = "Copied ✓"; setTimeout(function(){ b.textContent = "Copy"; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.copy).then(done, function(){});
+    });
+  });
+
+  // quote form -> mailto
+  document.getElementById("quoteForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, v = function(n){ return f.elements[n].value.trim(); };
+    var err = document.getElementById("formErr");
+    if (!v("name") || !v("company") || !v("items")) { err.style.display = "block"; return; }
+    err.style.display = "none";
+    var subject = "Quotation request: " + v("category") + " (" + v("company") + ")";
+    var body = "Hi Zarya Enterprises team,\n\nPlease share a quotation for the following:\n\n" + v("items") +
+      "\n\nCategory: " + v("category") +
+      "\nDelivery city: " + v("city") +
+      (v("when") ? "\nNeeded by: " + v("when") : "") +
+      "\n\nRegards,\n" + v("name") + "\n" + v("company");
+    window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  });
+
+  // reveal on scroll
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>
